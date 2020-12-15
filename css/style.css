@@ -35,3 +35,7 @@
     font-size: 30px;
     font-weight: 300;
 }
+
+.animate__animated.animate__slower {
+    animation-duration: calc(var(--animate-duration)*11);
+}
