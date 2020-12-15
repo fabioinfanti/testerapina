@@ -1,0 +1,37 @@
+.background_cabecalho{
+    background-image: url(../img/Background.png);
+    height: 950px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flexbox{
+    display: flex;
+    flex-flow: column; 
+    justify-content: space-between;
+    min-height: 750px;
+}
+
+.subtitulo{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+}
+
+.logo {
+    text-align: center;
+}
+
+.chamada {
+    text-align: center;
+    padding-top: 45px;
+    color: white;
+    font-family: 'poppins', sans-serif;
+    line-height: 1;
+    font-size: 30px;
+    font-weight: 300;
+}
