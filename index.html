@@ -5,10 +5,240 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="css/style.css">
     </head>
+    <!--COLAR ESTES NO HEAD-->
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-TLDBT4X');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon"
+  href="https://d2rplpg19h5gou.cloudfront.net/app/uploads/2017/05/05175406/cropped-inv-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/x-icon"
+  href="https://d2rplpg19h5gou.cloudfront.net/app/uploads/2017/05/05175406/cropped-inv-192x192.png" sizes="192x192" />
+<link type="image/x-icon" rel="apple-touch-icon-precomposed"
+  href="https://d2rplpg19h5gou.cloudfront.net/app/uploads/2017/05/05175406/cropped-inv-180x180.png" />
+<meta name="msapplication-TileImage"
+  content="https://d2rplpg19h5gou.cloudfront.net/app/uploads/2017/05/05175406/cropped-inv-270x270.png" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+
+<!--COLAR ESTES NO INÍCIO DO BODY (gerar diferente se for domínio próprio) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLDBT4X" height="0" width="0"
+    style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+
+<!--COLAR ESTES NO FINAL DO BODY-->
+
+<!--xpromo carregamento-->
+<script type='text/javascript' src='https://lp.inversapub.com/wp/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript'
+  src='https://lp.inversapub.com/app/themes/inversa/dist/scripts/anchors.js?v=1517350341'></script>
+<!--brite verify-->
+<!--attribute to the e-mail input: data-brite="email"  ".brite-error-message"-->
+<script src="https://s3-sa-east-1.amazonaws.com/cdn.inversapub.com/brite.js"></script>
+<!-- JQUERY -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- GETIP -->
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+
+<!--brite verify-->
+<script>
+  jQuery('.subscribe-form').on('submit', function (e) {
+    var email = jQuery(this).find(".form-control").val();
+    var data = {
+      'action': 'brite',
+      'email': email
+    };
+
+    window.self = this;
+
+    if (!window.flag) {
+      jQuery.post(this.getAttribute("data-validate"), data)
+        .done(function (response) {
+          if (response != "invalid") {
+            jQuery(self).find('.alert-invalid-email').css('display', 'none');
+            jQuery(self).data('valid', true);
+
+            jQuery("#formhide").hide();
+            jQuery("#pop-box-cmf").hide();
+            jQuery("#underlay").hide();
+
+            window.flag = true;
+            jQuery(self).trigger("submit");
+            return true;
+          } else {
+            e.preventDefault();
+            jQuery(self).find('.alert-invalid-email').css('display', 'block');
+            window.flag = false;
+            return false;
+          }
+        });
+    }
+
+    if (window.flag) {
+      return true;
+    } else {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  jQuery('.subscribe-form').find(".form-control").on('click', function () {
+    jQuery('.alert-invalid-email').css('display', 'none');
+  });
+</script>
+
+<!--xpromo replace-->
+<script>
+  function updateXpromo() {
+    xpromo = new URL(window.location.href).searchParams.get("xpromo");
+    if (xpromo != null) {
+      $('input[name=sourceId]').each(function () { $(this).val(xpromo); });
+      //document.getElementsByName("sourceId")[0].value = xpromo
+      return 1
+    }
+    return 0
+
+  }
+  updateXpromo();
+</script>
+
+<!--carrinho-->
+<script>
+  jQuery(document).ready(function ($) {
+
+    var email = getQueryVariable("email");
+    var xpromo = getQueryVariable("xpromo");
+    var url = 'vip.inversa';
+
+    if (email !== null) {
+
+      $('a').click(function (e) {
+
+        console.log(url);
+
+        if ($(this).attr('href').indexOf(url) !== -1) {
+
+          console.log('email: ' + email, 'xpromo: ' + xpromo);
+
+          jQuery.ajax({
+            type: "GET",
+            url: "https://pub.s7.exacttarget.com/5rgssg4hebs",
+            data: {
+              e: email, // Email em base64
+              xpromo: xpromo // XPROMO usado
+            },
+            async: true,
+            dataType: "jsonp",
+            crossDomain: true,
+            statusCode: {
+              200: function (response) {
+                console.log('200');
+              },
+              201: function (response) {
+                console.log('201');
+              },
+              400: function (response) {
+                console.log('400');
+              },
+              404: function (response) {
+                console.log('404');
+              }
+            }
+          });
+
+        }
+
+      });
+    }
+
+  });
+
+  function getQueryVariable(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+</script>
+<!--carrinho-->
+
+
+<!--- SCRIPTS DO LGPD --->
+<!-- CAPTURA DATA -->
+<script>
+  function getFormattedDate() {
+    var date = new Date();
+    var str = date.getFullYear() + "-" + ('00' + (date.getMonth() + 1)).slice(-2) + "-" + date.getDate() + " " + ('00' + date.getHours()).slice(-2) + ":" + ('00' + date.getMinutes()).slice(-2) + ":" + ('00' + date.getSeconds()).slice(-2);
+
+    return str;
+
+  }
+  $(document).ready(function () {
+    $("#dataNow").val(getFormattedDate());
+  });
+</script>
+
+<!-- CAPTURA IP -->
+<script>
+  $(document).ready(function () {
+    $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+      function (json) {
+        $("#ipAddr").val(json.ip);
+      }
+    );
+  });
+</script>
+
+<!--
+      PREENCHE EMAIL CODE64 
+      COLOCAR CLASSE "email-assinante" EM TODOS OS INPUTS QUE PRECISAR AUTOPREENCHER
+-->
+<script>
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+  document.addEventListener("DOMContentLoaded", function (event) {
+    if (getParameterByName('email') != null) {
+      var email = getParameterByName('email');
+      var dec = atob(email);
+      $(".email-assinante").each(function () {
+        $(this).val(dec);
+      });
+    }
+  });
+</script>
     <body>
         <div class="background_cabecalho">
             <div class="flexbox" >
@@ -25,10 +255,18 @@
             <div class="chamada animate__animated animate__fadeInDown animate__delay-2s">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
                     Donec in viverra odio. Mauris nec nibh.</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-down animate__animated animate__shakeY animate__infinite animate__slower" viewBox="0 0 16 16">
+                <a href="#nota">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-down animate__animated animate__shakeY animate__infinite animate__slower" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                </svg>
+                    </svg>
+                </a>
             </div>
+        </div>
+        <div class="nota" id="nota">
+            <p><b>Nota:</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum dapibus massa, egestas dictum ante. Aenean consequat lobortis ipsum, nec faucibus turpis pulvinar eu. Morbi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum dapibus massa, egestas dictum ante. Aenean consequat lobortis ipsum, nec faucibus turpis pulvinar eu. Morbi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum dapibus massa, egestas dictum ante. Aenean consequat lobortis ipsum, nec faucibus turpis pulvinar eu. Morbi.</p>
+        </div>
+        <div>
+            <p>iauaiushda</p>
         </div>
     </body>
     

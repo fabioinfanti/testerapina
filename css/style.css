@@ -1,3 +1,16 @@
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: white;
+}
+
 .background_cabecalho{
     background-image: url(../img/Background.png);
     height: 950px;
@@ -38,4 +51,18 @@
 
 .animate__animated.animate__slower {
     animation-duration: calc(var(--animate-duration)*11);
+}
+
+.nota {
+    background-color: black;
+    height: 250px;
+    box-shadow: 0 0 30px 30px #000;
+}
+
+.nota p {
+    width: 60%;
+    margin: auto;
+    padding-top: 50px;
+    font-size: 18px;
+    color: white;
 }
