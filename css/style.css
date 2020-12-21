@@ -2,6 +2,10 @@ html{
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: rgb(243 243 243);
+}
+
 a{
     text-decoration: none;
     color: white;
@@ -11,8 +15,47 @@ a:hover{
     color: white;
 }
 
+h3 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 40px;
+    padding: 0 80px 0 80px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 38px;
+    margin-bottom: 40px;
+    padding: 0 80px 0 80px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 80px 0 80px;
+}
+
+ul {
+    padding-left: 80px;
+    padding-right: 80px;
+    font-size: 22px;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+}
+
+ul li:before {
+    content: "\2192";
+}
+
 .background_cabecalho{
-    background-image: url(../img/Background.png);
+    background-image: url(../img/Background.jpg);
     height: 950px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,14 +66,14 @@ a:hover{
     display: flex;
     flex-flow: column; 
     justify-content: space-between;
-    min-height: 750px;
+    min-height: 700px;
 }
 
 .subtitulo{
     font-family: 'Poppins', sans-serif;
     text-align: center;
     padding-top: 30px;
-    font-size: 18px;
+    font-size: 30px;
     color: white;
     font-weight: 300;
 }
@@ -40,7 +83,7 @@ a:hover{
 }
 
 .logo p {
-    font-size: 70px;
+    font-size: 60px;
     color: white;
     font-variant: all-petite-caps;
     font-family: 'bebas neue', serif;
@@ -49,7 +92,7 @@ a:hover{
 }
 
 .logo img {
-    width: 25%;
+    width: 22%;
 }
 
 .chamada {
@@ -58,7 +101,7 @@ a:hover{
     color: white;
     font-family: 'poppins', sans-serif;
     line-height: 1;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 300;
 }
 
@@ -68,17 +111,286 @@ a:hover{
 
 .nota {
     background-color: black;
-    height: 250px;
+    height: 460px;
     box-shadow: 0 0 30px 30px #000;
 }
 
-.nota p {
+.borda{
+    padding-top: 50px;
+}
+
+.borda p {
     width: 60%;
     margin: auto;
-    padding-top: 50px;
-    font-size: 18px;
+    padding: 30px;
+    font-size: 21px;
     color: white;
+    border: 2px #fff solid;
 }
+
+.aviso{
+    text-align: center;
+    color: white;
+    font-size: 38px;
+    padding-top: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.aviso2{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.corpo {
+    z-index: -1;
+    position: relative;
+}
+
+.conteudo {
+    background-color: white;
+    width: 65%;
+    margin: auto;
+    padding-top: 80px;
+}
+
+.texto p{
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    padding: 0 80px 0 80px;
+}
+
+.texto b {
+    font-weight: 500;
+}
+
+.line {
+    border-bottom: 1px #000 solid;
+    width: 75%;
+    margin: 30px auto;
+}
+
+.btn {
+    background: #ba3e29;
+    text-align: center;
+    color: #f8f9fa;
+    font: 700 36px 'Poppins', sans-serif !important;
+    text-decoration: none;
+    border-radius: 70px;
+    max-width: 500px;
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+    padding: 15px 40px;
+    transition: .3s ease;
+    box-shadow: 0 0 20px 0px #bb3e29;    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.footer-copy {
+    margin-top: 50px;
+}
+
+.footer-copy p,
+.footer-copy a {
+    font-family: 'Roboto', Arial, sans-serif !important;
+    color: #3f3f3e !important;
+}
+
+.footer-contato {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    background-color: #e6e6e6;
+    padding: 40px 20px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.footer-contato-img {
+    display: block;
+    max-width: 130px !important;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-right: 30px !important;
+}
+
+.footer-contato-title {
+    font-size: 26px !important;
+    font-weight: bold !important;
+    margin-bottom: 15px !important;
+    line-height: 1.1 !important;
+}
+
+.footer-contato-txt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+    line-height: 1 !important;
+}
+
+.footer-contato-txt img {
+    display: block;
+    width: 25px !important;
+    margin-right: 15px !important;
+}
+
+.footer-contato-txt span {
+    font-size: 18px !important;
+    margin-left: 5px !important;
+}
+
+.footer-contato-link {
+    color: #3f3f3e !important;
+    text-decoration: none !important;
+}
+
+.footer-contato-link:hover {
+    text-decoration: underline !important;
+}
+
+.footer-contato-small {
+    font-size: 12px !important;
+    margin: 18px 0 0 !important;
+    line-height: 1.5 !important;
+}
+
+.footer-disclosure {
+    background-color: #f5f5f5;
+    padding: 30px 20px;
+}
+
+.footer-disclosure-logo {
+    display: block;
+    width: 90px !important;
+    margin: 0 auto 20px !important;
+}
+
+.footer-disclosure p {
+    margin-bottom: 10px !important;
+    font-size: 13px !important;
+    text-align: center !important;
+    line-height: 1.5 !important;
+}
+
+.footer-copy-link {
+    color: cornflowerblue !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    line-height: 1.5 !important;
+}
+
+.footer-copy-link:hover {
+    text-decoration: underline !important;
+}
+
+.footer-association {
+    background-color: #fff;
+    padding: 30px 20px;
+}
+
+.footer-association p {
+    font-size: 13px !important;
+    text-align: center !important;
+    margin-bottom: 30px !important;
+    line-height: 1.5 !important;
+}
+
+.footer-association-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 250px;
+    margin: 0 auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+}
+
+.footer-association-container img {
+    width: 100px !important;
+    display: block;
+    height: 38px !important;
+}
+
+.footer-inversa {
+    border-bottom: 5px solid #dddc13;
+    padding: 0 30px 20px;
+}
+
+.footer-inversa-gurus {
+    display: block;
+    max-width: 100% !important;
+    margin: 0 auto 30px !important;
+}
+
+.footer-inversa-block p {
+    font-size: 12px !important;
+    margin-bottom: 5px !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+}
+
+.footer-inversa-block a {
+    color: #3f3f3e !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+}
+
+.footer-inversa-block a:hover {
+    color: #3f3f3e !important;
+    text-decoration: underline !important;
+}
+
+@media (max-width: 900px) {
+    .footer-contato {
+        text-align: center !important;
+    }
+
+    .footer-contato-img {
+        margin-right: 0 !important;
+        margin-bottom: 25px !important;
+    }
+
+    .footer-contato-title {
+        font-size: 24px !important;
+    }
+
+    .footer-contato-txt {
+        -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+        justify-content: center !important;
+    }
+}
+
+/*---- FIM CSS FOOTER -----*/
+
+
 
 @media screen and (max-width: 1024px) {
     .background_cabecalho{
